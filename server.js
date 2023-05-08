@@ -2,6 +2,16 @@ console.log("Web Serverni boshlash");
 const express = require("express");
 const app = express();
 const http = require("http");
+const fs = require("fs");
+
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+  if (err) {
+    console.log("ERROR:", err);
+  } else {
+    user = JSON.parse(data);
+  }
+});
 
 // 1: Entering codes
 app.use(express.static("public"));
@@ -15,11 +25,17 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: Rooting codes
-app.get("/hello", function(req, res) {
-  res.end(`<h1 style = "background: green">Hello World by Jacob</h1>`);
+app.post("/create-item", (req, res) => {
+  console.log(req);
+  res.json({test: "success"});
 });
-app.get("/gift", function(req, res) {
-  res.end(`<h1 style = "background: pink">You are the page of gifts</h1>`);
+
+app.get("/author", (req, res) => {
+  res.render("author", { user: user });
+});
+
+app.get("/", function(req, res) {
+  res.render('harid');
 });
 
 const server = http.createServer(app);
