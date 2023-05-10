@@ -2,9 +2,10 @@
   "name": "Jacob",
   "profession": "Software Engineer",
   "age": 31,
-  "recidence": "S.Korea",
+  "residence": "S.Korea",
   "address": "S.Korea, Gyeongsan",
-  "languages": ["Uzbek", "English", "Russian", "Korean"],
+  "freelance": "Available",
+  "languages": ["Uzbek", "English", "Korean"],
   "skills": ["HTML", "CSS", "Js", "NodeJs", "Pyhton"],
   "extra_skills": [
     "Bootstrap, Materialize",

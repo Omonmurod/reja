@@ -24,7 +24,7 @@ app.use(express.urlencoded({extended: true}));
 app.set("views", "views");
 app.set("view engine", "ejs");
 
-// 4: Rooting codes
+// 4: Routing codes
 app.post("/create-item", (req, res) => {
   console.log(req);
   res.json({test: "success"});
