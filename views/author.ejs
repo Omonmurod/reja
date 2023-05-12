@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/main.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://fonts.googleapis.com/css?family=Inter"
       rel="stylesheet"
     />
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -15,26 +16,27 @@
 
   <body>
     <div class="frame">
+      <!--Main Frame-->
       <div class="main_frame">
+        <!--Left Frame-->
         <div class="left_frame">
           <div class="left_1">
             <div class="left_1-1">
-              <img
-                src="images/profile.png"
-                width="156px"
-                height="142px"
-                alt=""
-              />
+              <img src="images/profile.png" width="156px" height="142px" />
             </div>
-            <div class="left_1-2"><%=user.name%></div>
-            <div class="left_1-3"><%=user.profession%></div>
+            <div class="left_1-2">
+              <%=user.name%>
+            </div>
+            <div class="left_1-3">
+              <%=user.profession%>
+            </div>
             <div class="left-icons">
-              <a class="link_href" href="https://www.facebook.com/">
+              <a class="link_href" href="">
                 <div class="icon">
                   <img src="icon/Facebook.svg" class="icon-1" />
                 </div>
               </a>
-              <a class="link_href" href="https://www.instagram.com/">
+              <a class="link_href" href="">
                 <div class="icon">
                   <img src="icon/Instagram.svg" class="icon-1" />
                 </div>
@@ -44,12 +46,12 @@
                   <img src="icon/Twitter.svg" class="icon-1" />
                 </div>
               </a>
-              <a class="link_href" href="https://www.linkedin.com/home">
+              <a class="link_href" href="">
                 <div class="icon">
                   <img src="icon/Linkeding.svg" class="icon-1" />
                 </div>
               </a>
-              <a class="link_href" href="https://www.youtube.com/">
+              <a class="link_href" href="">
                 <div class="icon">
                   <img src="icon/Youtube.svg" class="icon-1" />
                 </div>
@@ -70,7 +72,8 @@
               <span class="word">Residence: </span><%=user.residence%>
             </div>
             <div class="left_2-3">
-              <span class="word">Freelance: </span><%=user.freelance%>
+              <span class="word">Freelance: </span
+              ><span style="color: limegreen"><%=user.freelance%></span>
             </div>
             <div class="left_2-4">
               <span class="word">Address: </span><%=user.address%>
@@ -79,27 +82,287 @@
           <div class="marginer"></div>
           <div class="left_3">
             <div class="left_3-1">
-              <span class="word">Age: </span><%=user.age%>
+              <span class="word">Languages</span>
             </div>
             <div class="left_3-2">
-              <span class="word">Residence: </span><%=user.residence%>
+              <span class="word2">Uzbek</span><span class="word2">100%</span>
+            </div>
+            <div>
+              <img src="icon/Line100.svg">
             </div>
             <div class="left_3-3">
-              <span class="word">Freelance: </span><%=user.freelance%>
+              <span class="word2">English</span><span class="word2">80%</span>
+            </div>
+            <div>
+              <img src="icon/Line80.svg">
             </div>
             <div class="left_3-4">
-              <span class="word">Address: </span><%=user.address%>
+              <span class="word2">Korean</span><span class="word2">60%</span>
+            </div>
+            <div>
+              <img src="icon/Line60.svg">
             </div>
           </div>
           <div class="marginer"></div>
-          <div class="left_4"></div>
+          <div class="left_4">
+            <div class="left_4-1">
+              <span>Skills</span>
+            </div>
+            <div class="left_4-2">
+              <span class="word2">Html</span><span class="word2">90%</span>
+            </div>
+            <div>
+              <img src="icon/skill1.svg">
+            </div>
+            <div class="left_4-3">
+              <span class="word2">CSS</span><span class="word2">85%</span>
+            </div>
+            <div>
+              <img src="icon/skill2.svg">
+            </div>
+            <div class="left_4-4">
+              <span class="word2">Js</span><span class="word2">80%</span>
+            </div>
+            <div>
+              <img src="icon/skill3.svg">
+            </div>
+            <div class="left_4-5">
+              <span class="word2">PHP</span><span class="word2">75%</span>
+            </div>
+            <div>
+              <img src="icon/skill4.svg">
+            </div>
+            <div class="left_4-6">
+              <span class="word2">WordPress</span><span class="word2">85%</span>
+            </div>
+            <div>
+              <img src="icon/skill5.svg">
+            </div>
+          </div>
           <div class="marginer"></div>
-          <div class="left_5"></div>
+          <div class="left_5">
+            <div class="left_5-1">
+              <span>Extra Skills</span>
+            </div>
+            <div class="left_5-2">
+              <img src="icon/last_icon.svg"> <span class="word2">Bootstrap, Materialize</span>
+            </div>
+            <div class="left_5-3">
+              <img src="icon/last_icon.svg"> <span class="word2">Stylus, Sass, Less</span>
+            </div>
+            <div class="left_5-4">
+              <img src="icon/last_icon.svg"> <span class="word2">Gulp, Webpack, Grunt</span>
+            </div>
+            <div class="left_5-5">
+              <img src="icon/last_icon.svg"> <span class="word2">GIT Knowledge</span>
+            </div>
+          </div>
           <div class="marginer"></div>
+        </div>  
+        <!-- / Left Frame Finished-->
+
+        <!--Middle Frame-->
+        <div class="middle_frame">
+          <div class="midd1">
+            <div>
+              <img src="icon/ellipse1.svg" 
+              style="box-sizing: border-box;
+              position: absolute;
+              width: 16.02px;
+              height: 15.57px;
+              left: 375.05px;
+              top: 40.86px;
+              border: 2px solid rgba(255, 180, 0, 0.8);">
+
+              <img src="icon/ellipse2.svg" 
+              style="box-sizing: border-box;
+              position: absolute;
+              width: 16.02px;
+              height: 15.57px;
+              left: 423.1px;
+              top: 422.22px;
+              border: 2px solid rgba(5, 255, 0, 0.8);">
+
+              <img src="icon/ellipse3.svg" 
+              style="box-sizing: border-box;
+              position: absolute;
+              width: 15.93px;
+              height: 15.65px;
+              left: 216.43px;
+              top: 333.69px;
+              border: 2px solid rgba(0, 71, 255, 0.8);
+              transform: matrix(0.9, 0.43, -0.45, 0.89, 0, 0);">
+
+              <img src="icon/ellipse4.svg" 
+              style="box-sizing: border-box;
+              position: absolute;
+              width: 16.02px;
+              height: 15.57px;
+              left: 890.96px;
+              top: 427.09px;
+              border: 2px solid rgba(255, 46, 0, 0.8);">
+
+              <img src="icon/ellipse5.svg" 
+              style="box-sizing: border-box;
+              position: absolute;
+              width: 16.02px;
+              height: 15.57px;
+              left: 855.55px;
+              top: 62.26px;
+              border: 2px solid rgba(61, 4, 66, 0.8);">
+            </div>
+            <div class="mid1-1">
+              <h1 class="mid1-1__title">
+                Doctor neurologists<br />
+                in OHSU Hospital
+              </h1>
+              <p class="mid1-1__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing<br />
+                elit. Et, volutpat feugiat placerat lobortis. Natoque<br />
+                rutrum semper sed suspendisse nunc lectus.
+              </p>
+              <button class = "btn"><span style="text-align: center; font-family: 'Inter', sans-serif; margin-top: 16px; margin-left: 35px;">HIRE ME  &#8594</span></button>
+            </div>
+            <div class="mid1-2">
+              <img
+                src="images/profile2.png"
+                style="
+                  position: absolute;
+                  width: 326.06px;
+                  height: 446.63px;
+                  left: 580px;
+                  top: 19.46px;
+                "
+              />
+            </div>
+          </div>
+          <div class="midd2">
+            <div class="midd2-1">
+              <h1
+                style="
+                  font-family: 'Inter', sans-serif;
+                  text-align: center;
+                  size: 32;
+                  line-height: 40px;
+                "
+              >
+                My Services
+              </h1>
+              <span
+                style="
+                  text-align: center;
+                  font-weight: 100;
+                  font-family: 'Inter', sans-serif;
+                  size: 15px;
+                  line-height: 24px;
+                "
+              >
+                Amet minim mollit non deserunt ullamco est sit<br />
+                aliqua dolor do amet sint. Velit officia consequat<br />
+                duis enim velit mollit. lorem ipsum
+              </span>
+            </div>
+            <div class="midd2-2">
+              <div class="midd2-service">
+                <img src="box_images/service-1.svg" class="img-ser" />
+                <h4 class="service-card__title">Web Development</h4>
+                <p class="sevice-card__description">Blog, E-Commerce</p>
+              </div>
+              <div class="midd2-service">
+                <img src="box_images/service-2.svg" class="img-ser" />
+                <h4 class="service-card__title">uI/uX design</h4>
+                <p class="sevice-card__description">
+                  Mobile app, website design
+                </p>
+              </div>
+              <div class="midd2-service">
+                <img src="box_images/service-3.svg" class="img-ser" />
+                <h4 class="service-card__title">sound design</h4>
+                <p class="sevice-card__description">Voice Over, Beat Making</p>
+              </div>
+            </div>
+            <div class="midd2-3">
+              <div class="midd2-service">
+                <img src="box_images/service-4.svg" class="img-ser" />
+                <h4 class="service-card__title">game design</h4>
+                <p class="sevice-card__description">
+                  Character Design, Props & Objects
+                </p>
+              </div>
+              <div class="midd2-service">
+                <img src="box_images/service-5.svg" class="img-ser" />
+                <h4 class="service-card__title">photography</h4>
+                <p class="sevice-card__description">
+                  portrait, product photography
+                </p>
+              </div>
+              <div class="midd2-service">
+                <h4 class="service-card__title">Advertising</h4>
+                <p class="sevice-card__description">
+                  Lorem ipsum dolor sit amet,<br />
+                  consectetur adipiscing elit. Vitae<br />
+                  nulla diam in ac dictum<br />
+                  a urna viverra morbi.
+                </p>
+                <span
+                  style="
+                    font-family: 'Inter', sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 12px;
+                    text-align: center;
+                    line-height: 14px;
+                    color: #ffb400;
+                  "
+                  >ORDER NOW >
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="midd_frame"></div>
-        <div class="right_frame"></div>
+        <!-- / Middle Frame Finished-->
+
+        <!--Right Frame-->
+        <div class="right_frame">
+          <div>
+            <img src="menu_icon/right1.1.svg" class="icon-2" />
+          </div>
+          <div class="right_2">
+            <a class="link_href" href="">
+              <div class="right_icon2">
+                <img src="menu_icon/right2.1.svg" class="icon-3" />
+              </div>
+            </a>
+            <a class="link_href" href="">
+              <div class="right_icon2">
+                <img src="menu_icon/right2.2.svg" class="icon-3" />
+              </div>
+            </a>
+            <a class="link_href" href="">
+              <div class="right_icon2">
+                <img src="menu_icon/right2.3.svg" class="icon-3" />
+              </div>
+            </a>
+            <a class="link_href" href="">
+              <div class="right_icon2">
+                <img src="menu_icon/right2.4.svg" class="icon-3" />
+              </div>
+            </a>
+            <a class="link_href" href="">
+              <div class="right_icon2">
+                <img src="menu_icon/right2.5.svg" class="icon-3" />
+              </div>
+            </a>
+            <a class="link_href" href="">
+              <div class="right_icon2">
+                <img src="menu_icon/right2.6.svg" class="icon-3" />
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- / Right Frame FINISHED-->
       </div>
+      <!-- / Main Frame Finished-->
     </div>
   </body>
 </html>
