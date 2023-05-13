@@ -1,36 +1,82 @@
-console.log("Jack Ma maslahati:");
-const list = [
-  "Yaxshi talaba bo'ling",  //0-20
-  "To'g'ri boshliq tanlang va ko'proq xato qiling",  //20-30
-  "O'zingizga ishlashni boshlang",  //30-40
-  "Siz kuchli bo'lgan narsalarni qiling",  //40-50
-  "Yoshlarga investitsiya qiling",  //50-60
-  "Endi dam oling, foydasi yo'q endi",  //60
-];
-
-//Callback functions
-function maslahatBering (a, callback) {
-  if(typeof a !== 'number') callback("Insert the number please", null);
-  else if(a <= 20) callback(null, list[0]);
-  else if(a > 20 && a <= 30) callback(null, list[1]);
-  else if(a > 30 && a <= 40) callback(null, list[2]);
-  else if(a > 40 && a <= 50) callback(null, list[3]);
-  else if(a > 50 && a <= 60) callback(null, list[4]);
-  else {
-    setInterval(function () {
-      callback(null, list[5]);
-    }, 1000);
-  } 
-} 
-
-console.log("Passed here 0");
-maslahatBering(65, (err, data) => {
-  if(err) console.log('ERROR:', err);
-  else {
-    console.log('Javob:', data);
+// Task D
+class Shop {
+  constructor(bread, pasta, cola) {
+    this.bread = bread;
+    this.pasta = pasta;
+    this.cola = cola;
   }
-});
-console.log("Passed here 1");
+
+  selled_amount(a, b, c) {
+    this.bread = this.bread - a;
+    this.pasta = this.pasta - b;
+    this.cola = this.cola - c;
+  }
+
+  received_amount(a, b, c) {
+    this.bread = this.bread + a;
+    this.pasta = this.pasta + b;
+    this.cola = this.cola + c;
+  }
+
+  remain_amount() {
+    console.log(`we have: ${this.bread}pc bread, ${this.pasta}pc pasta, ${this.cola}pc cola`);
+    return this.bread, this.pasta, this.cola;
+  }
+
+}
+
+
+let currentTime = new Date();
+let currentHour = currentTime.getHours();
+let currentMinute = currentTime.getMinutes();
+
+console.log("Now time is: ", currentHour + ":" + currentMinute); 
+const remain = new Shop(4, 5, 2);
+remain.remain_amount();
+
+remain.received_amount(0, 0, 4);
+remain.selled_amount(3,0,0);
+
+console.log("Now time is: ", currentHour + ":" + currentMinute); 
+remain.remain_amount();
+
+
+
+
+
+// console.log("Jack Ma maslahati:");
+// const list = [
+//   "Yaxshi talaba bo'ling",  //0-20
+//   "To'g'ri boshliq tanlang va ko'proq xato qiling",  //20-30
+//   "O'zingizga ishlashni boshlang",  //30-40
+//   "Siz kuchli bo'lgan narsalarni qiling",  //40-50
+//   "Yoshlarga investitsiya qiling",  //50-60
+//   "Endi dam oling, foydasi yo'q endi",  //60
+// ];
+
+// //Callback functions
+// function maslahatBering (a, callback) {
+//   if(typeof a !== 'number') callback("Insert the number please", null);
+//   else if(a <= 20) callback(null, list[0]);
+//   else if(a > 20 && a <= 30) callback(null, list[1]);
+//   else if(a > 30 && a <= 40) callback(null, list[2]);
+//   else if(a > 40 && a <= 50) callback(null, list[3]);
+//   else if(a > 50 && a <= 60) callback(null, list[4]);
+//   else {
+//     setInterval(function () {
+//       callback(null, list[5]);
+//     }, 1000);
+//   } 
+// } 
+
+// console.log("Passed here 0");
+// maslahatBering(65, (err, data) => {
+//   if(err) console.log('ERROR:', err);
+//   else {
+//     console.log('Javob:', data);
+//   }
+// });
+// console.log("Passed here 1");
 
 //ASYNC function
 // async function maslahatBering (a) {
