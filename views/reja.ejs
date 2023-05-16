@@ -41,13 +41,13 @@
           <span class="item-text"><%=item.reja%></span>
           <div>
             <button
-              data-id="<%=item.id%>"
+              data-id="<%=item._id%>"
               class="edit-me btn btn-secondary btn-sm mr-1"
             >
               O'zgartirish
             </button>
             <button
-              data-id="<%=item.id%>"
+              data-id="<%=item._id%>"
               class="delete-me btn btn-danger btn-sm"
             >
               O'chirish
@@ -60,5 +60,8 @@
         Hamma Rejalarni O'chirish
       </button>
     </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/browser.js"></script>
   </body>
 </html>
