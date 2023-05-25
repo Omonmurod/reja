@@ -17,17 +17,17 @@ const db = require("./server").db();
 const mongodb = require("mongodb");
 
 // 1: Entering codes
-app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.static("public")); //public folder har kim uchun ochiq
+app.use(express.json()); //json formatdagi kelayotgan infoni objectga o'zgartirib beradi
+app.use(express.urlencoded({extended: true}));  //HTML formda insert qilingan infoni express qabul qilishi un ishlatiladi
 
 // 2: Codes based on SESSION
 
-// 3: Views code
+// 3: Views code (BSSR backend side server rendering backendda viewni yasab olyapmiz)
 app.set("views", "views");
-app.set("view engine", "ejs");
+app.set("view engine", "ejs"); // view engine ejs ekanligi bildirildi
 
-// 4: Routing codes
+// 4: Rooting codes
 app.post("/create-item", (req, res) => {
   const new_reja = req.body.reja;
   console.log("user entered /create-item");
@@ -68,18 +68,18 @@ app.post("/delete-all", (req, res) => {
   }
 });
 
-app.get("author", (req, res) => {
-  res.render("author", { user: user });
-});
+// app.get("author", (req, res) => {
+//   res.render("author", { user: user });
+// });
 
-app.get("/", function(req, res) {
+app.get("/", function(req, res) {   // "/" page
   console.log("user entered /");
   db.collection("plans") 
   .find()
   .toArray((err, data) => {
     if(err) {
       console.log(err);
-      res.end("something went wrong");
+      res.end("something went wrong");  //HTML kodni qaytadari
     } else {
       res.render("reja", {items: data});
     }
